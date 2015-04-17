@@ -61,7 +61,7 @@ Map <- crop(alt, Florida)
 plot(Map)
 Map1 <- mask (Map, Florida)
 plot(Map1)
-writeRaster(Map1, "Map1.asc", format="ascii")
+writeRaster(Map1, "Map1.asc", format="ascii", overwrite=TRUE)
 ```
 
 
@@ -70,7 +70,7 @@ Stacking Maps
 ========================================================
 
 ```{r}
-Map2 <- raster("Documents/GitHubRepos/RasterPkgDemo/data/bio2.asc")
+Map2 <- raster("data/bio2.asc")
 Map2
 Map1
 projection(Map2)<- LATLON
